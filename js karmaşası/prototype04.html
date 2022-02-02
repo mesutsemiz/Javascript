@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    what does it mean Prototype in Javascript?
+</body>
+<script>
+ /*   
+    const person = {
+        name: 'anna',
+        surname : 'marie',
+        age :30,
+        fullName:function(){
+            return this.name+ " "+this.surname
+        }
+
+    }
+
+    console.log(person);
+    console.log(person.name);
+    console.log(person.fullName());
+    console.log(person.toString());
+
+
+    class Person{
+        constructor(name,surname,age) {
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+
+        }
+        fullName(){
+            return this.name + " " + this.surname
+        }
+    }
+
+    const mesut = new Person("mesut", "semiz", 28)
+    console.log(mesut);
+    // Objet + name, surname, age, fullName() --->Person ----->mesut
+    console.log(mesut.__proto__);
+
+    const esma =new Person("esma", "semiz", 20)
+    console.log(esma);
+    esma.job= "dentist";
+    console.log(esma);
+    console.log(esma.toString());
+
+    // Objet + name, surname, age, fullName() --->Person+job ----->esma
+
+    
+
+    esma.toString = function(){   //İMPORTANT!!!!!!!!!!
+        return "we can change  default Objet methods"
+    }
+    console.log(esma.toString());
+
+    
+
+    class Person{
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+            this.fullName = function(){
+                return this.name + " " + this.surname
+            }
+
+        }
+
+        
+
+    }
+
+
+    Person.prototype.fullName = function(){
+        return this.name + " " + this.surname
+    }
+
+    Person.prototype.surname="semiz"
+    const mesut = new Person("mesut", "semiz", 28);
+    const esma = new Person("esma", "semiz", 20)
+
+    console.log(mesut);
+    console.log(esma);
+
+    */
+
+
+    const person = {
+        name: 'anna',
+        surname : 'marie',
+        age :30,
+        fullName:function(){
+            return this.name+ " "+this.surname
+        }
+
+    }
+
+    const jhon = Object.create(person)
+    console.log(jhon);
+    console.log(jhon.name);
+    jhon.name ="Alex"
+    console.log(jhon.name);
+    console.log(jhon);
+    jhon.age = 27
+    console.log(jhon.hasOwnProperty("age"));
+    console.log(jhon.hasOwnProperty("name"));
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
