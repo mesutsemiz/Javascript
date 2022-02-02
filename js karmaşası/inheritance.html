@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>working on js...</h1>
+    
+</body>
+<script>
+    /*
+    class Person{
+        constructor(name,surname,age) {
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+
+        }
+        fullName(){
+            return this.name + " " + this.surname
+        }
+    }
+
+    //const mesut = new Person("Mesut", "semiz",28)
+
+    //console.log(mesut.fullName()); 
+    //console.log(mesut.age);
+    
+    class Engineer extends Person {};
+
+    const yasin = new Engineer("yasin", "semiz", 32);
+    const mesut = new Person("Mesut", "semiz",28)
+
+    console.log(yasin);
+    console.log(mesut);
+
+    console.log(mesut instanceof Engineer);
+    console.log(yasin instanceof Person);
+
+    */
+
+
+    class Person{
+        constructor(name,surname,age) {
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+
+        }
+        fullName(){
+            return this.name + " " + this.surname
+        }
+    }
+
+    class Engineer extends Person {
+        constructor(name, surname, age, job){
+            super(name, surname, age);
+            this.job = job;
+        }
+
+        getMoney(){
+            console.log("You have to get money")
+            }
+    };
+
+
+    const mesut = new Person("mesut", "semiz", 28, );
+    const harun = new Engineer("harun", "semiz", 26, "engineer");
+
+    console.log(mesut);
+    console.log(harun);
+
+    console.log(harun.getMoney());
+    console.log(mesut.fullName());
+   
+
+
+
+
+
+</script>
+</html>
