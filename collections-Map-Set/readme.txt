@@ -11,3 +11,7 @@ const map =new Map();
 *How to Add values to a Map in JavaScript*
 
 To add value to a Map, use the set(key, value) method.
+
+***How to Get values from a Map in JavaScript
+
+To get a value from a Map, use the get(key) method:
