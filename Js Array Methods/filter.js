@@ -34,7 +34,15 @@ let cities = [
 
 // console.log(bigCities);
 
-cities
-    .filter(city => city.population < 3000000)
-    .sort((c1, c2) => c1.population - c2.population)
-    .map(city => console.log(city.name + ':' + city.population));
+// cities
+//     .filter(city => city.population < 3000000)
+//     .sort((c1, c2) => c1.population - c2.population)
+//     .map(city => console.log(city.name + ':' + city.population));
+
+
+
+
+
+const numbers =[2,3,4,8,5,6,9,7,5,2,4,25]
+
+console.log(numbers.filter((number) => (number%2)));
