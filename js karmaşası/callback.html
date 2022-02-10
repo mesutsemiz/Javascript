@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syn-Async</title>
+</head>
+<body>
+    <h1>I have just learning CALLBACK structure in Js</h1>
+
+    <button id="btn"> click</button>
+
+    <script>
+        /*
+        const myName = ()=>{
+            console.log("my name is mesut");
+        };
+
+        setTimeout(myName,3000)
+
+        */
+        
+
+        /*
+        setTimeout(()=>{
+            console.log("my name is vasili");
+        },3000)
+        
+      
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click",()=>{
+            alert("you clicked me!!");
+
+            let pElem = document.createElement("p");
+            pElem.innerHTML ="this is newly added"
+            document.body.appendChild(pElem);
+        });
+
+        let h1Elem = document.createElement("h1");
+        h1Elem.innerHTML ="HEADER"
+        document.body.appendChild(h1Elem);
+
+          
+
+        const books = [
+        {name:"kelile ve dimne", author:"beydeba"},
+        {name:"sefiller", author:"victor hugo"},
+        {name:"diriliş", author:"tolstoy"},
+        {name:"suç ve ceza", author:"dostoyevski"},
+
+        ]
+
+        
+
+        const listBooks=()=>{
+            books.map((book,index)=>{
+                console.log(book.name);
+            });
+        }
+
+        
+
+        const addNewBook = function(newbook, callback){
+            books.push(newbook)
+            callback()
+
+        }
+
+        addNewBook({name: "iastanbul beyefendisi", author:"ahmet ümit"},listBooks)
+
+            
+                                              
+
+        function filter(sayilar){
+           
+            let ciftsayi=[];
+            for (const sayi of sayilar){
+                if (sayi%2 == 0){
+                    sayilar.push(sayi);
+                }
+
+            }
+            return ciftsayi
+            
+        }
+        let sayilar= [1,5,6,8,4,7,9,45,65,25,28]
+
+        console.log(ciftsayi);
+
+        */
+
+
+        
+
+
+
+
+        /*/
+
+        function isOdd(number){
+           return number %2 != 0;
+        }
+
+        function filter(numbers,func){
+            let results = [];
+            for (const number of numbers){
+                if(func(number)){results.push(number);}
+            }
+            return results
+        }
+
+        let numbers = [1,2,9,5,6,8,7]
+
+        console.log(filter(numbers, isOdd));
+
+        */
+       
+
+        
+        
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
