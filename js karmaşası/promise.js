@@ -258,40 +258,62 @@ learnJS.catch(
 
 The following functions illustrate the three asynchronous operations: */
 
-function getUser(userId) {
-    return new Promise((resolve, reject) =>{
-        console.log("Get the user from datatbase")
-        setTimeout(() => {
-            resolve({ 
-                userId:userId,
-                username:"admin"
-            })
-        }, 5000);
-    })
-}
+// function getUser(userId) {
+//     return new Promise((resolve, reject) =>{
+//         console.log("Get the user from datatbase")
+//         setTimeout(() => {
+//             resolve({ 
+//                 userId:userId,
+//                 username:"admin"
+//             })
+//         }, 5000);
+//     })
+// }
 
-function getServices(user) {
-    return new Promise((resolve, reject)=>{
-        console.log(`get services of ${user.username} from the API`)
-        setTimeout(() => {
-            resolve(["Email", "VPN", "CDN"])
+// function getServices(user) {
+//     return new Promise((resolve, reject)=>{
+//         console.log(`get services of ${user.username} from the API`)
+//         setTimeout(() => {
+//             resolve(["Email", "VPN", "CDN"])
             
-        }, 3000);
+//         }, 3000);
 
-    })
-}
+//     })
+// }
 
-function getServiceCost(services){
-    return new Promise((resolve, reject) => {
-        console.log(`calculate th service cost of ${services}.`)
-        setTimeout(() => {
-            resolve(services.length*100);
+// function getServiceCost(services){
+//     return new Promise((resolve, reject) => {
+//         console.log(`calculate th service cost of ${services}.`)
+//         setTimeout(() => {
+//             resolve(services.length*100);
             
-        }, 3000);
-    })
-}
+//         }, 3000);
+//     })
+// }
 
-getUser(100)
-.then(getServices)
-.then(getServiceCost)
-.then(console.log);
+// getUser(100)
+// .then(getServices)
+// .then(getServiceCost)
+// .then(console.log);
+
+
+
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log('The first promise has resolved');
+        resolve(10);
+    }, 5 * 1000);
+
+});
+
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log('The second promise has resolved');
+        resolve(20);
+    }, 2 * 1000);
+});
+
+
+Promise.race([p1, p2])
+    .then(value => console.log(`Resolved: ${value}`))
+    .catch(reason => console.log(`Rejected: ${reason}`));
