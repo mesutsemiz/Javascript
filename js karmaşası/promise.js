@@ -298,22 +298,51 @@ The following functions illustrate the three asynchronous operations: */
 
 
 
-const p1 = new Promise((resolve, reject) => {
+// const p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log('The first promise has resolved');
+//         resolve(10);
+//     }, 5 * 1000);
+
+// });
+
+// const p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log('The second promise has resolved');
+//         resolve(20);
+//     }, 2 * 1000);
+// });
+
+
+// Promise.race([p1, p2])
+//     .then(value => console.log(`Resolved: ${value}`))
+//     .catch(reason => console.log(`Rejected: ${reason}`));
+
+
+// function getUsers(){
+//     return [
+//         {username:'mesut', email:'mesut@gmail.com', phone:253323}, 
+//         {username:'harun', email:'harun@gmail.com'}
+//     ]
+// }
+
+// function findUser(username){
+//     const users=getUsers()
+//     const user=users.find((user) => user.username===username )
+//     return user
+// }
+
+// console.log(findUser("mesut"))
+
+function getUsers() {
+    let users = [];
     setTimeout(() => {
-        console.log('The first promise has resolved');
-        resolve(10);
-    }, 5 * 1000);
+      users = [
+        { username: 'john', email: 'john@test.com' },
+        { username: 'jane', email: 'jane@test.com' },
+      ];
+    }, 1000);
+    return users;
+  }
 
-});
-
-const p2 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log('The second promise has resolved');
-        resolve(20);
-    }, 2 * 1000);
-});
-
-
-Promise.race([p1, p2])
-    .then(value => console.log(`Resolved: ${value}`))
-    .catch(reason => console.log(`Rejected: ${reason}`));
+  console.log(getUsers())
