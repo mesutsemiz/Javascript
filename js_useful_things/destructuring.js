@@ -14,20 +14,34 @@
 
 /////*object destructuring assignment********************************
 
-let person = {
-    firstName:"mesut", lastName:"semiz"
+// let person = {
+//     firstName:"mesut", lastName:"semiz"
+// }
+
+
+// let firstName = person.firstName;
+// let lastName = person.lastName;
+// person.school="TAL"
+
+// let {firstName:fname, lastName:lname, school} = person
+
+// ///SYNTAX: person
+
+// // let {property1:variable1, property2:vaiable2} = object;
+
+// console.log(fname)
+// console.log(school)
+
+
+function stat(a, b) {
+    return [
+        a+b, //
+        (a+b)/2, //
+        a-b
+    ]
+    
 }
 
+let [sum, average, difference] = stat(45,24)
 
-let firstName = person.firstName;
-let lastName = person.lastName;
-person.school="TAL"
-
-let {firstName:fname, lastName:lname, school} = person
-
-///SYNTAX: person
-
-// let {property1:variable1, property2:vaiable2} = object;
-
-console.log(fname)
-console.log(school)
+console.log(sum, average, difference)
