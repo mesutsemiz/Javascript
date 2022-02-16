@@ -8,3 +8,5 @@ let message;
 age >= 16 ? (message = 'You can drive.') : (message = 'You cannot drive.');
 
 console.log(message);
+
+

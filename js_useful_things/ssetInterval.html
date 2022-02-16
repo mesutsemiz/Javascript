@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color:blue;
+            z-index: -10;
+        }
+        #toggle{
+            z-index: 10;
+            background:yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>when you click the buuton the toggle will stop.Assure you</h1>
+    <button id="toggle" onclick="toggle()">stop the toggle</button>
+    <button onclick="stop()">stop</button>
+    <script>
+        
+
+        function toggle() {
+            console.log("hello");
+           
+            
+            let x = document.body;
+            x.parentElement.style.backgroundColor ='#'+Math.floor(Math.random()*16777215).toString(16)
+        }
+        
+        var inter =setInterval(toggle, 2000);
+
+
+        function stop() {
+            clearInterval(inter);
+        }
+        
+        
+    </script>
+</body>
+</html>
