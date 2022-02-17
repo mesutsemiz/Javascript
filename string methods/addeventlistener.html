@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" id="pending" name="status">
+    <label for="pending">pending</label>
+    <input type="radio" id="resolved" name="status">
+    <label for="resolved">resolved</label>
+    <input type="radio" id="reject" name="status">
+    <label for="rejected">rejected</label>
+    <p id="result"></p>
+    
+
+    <script>
+        const result =document.getElementById("result");
+
+        document.body.addEventListener("change",function(e){
+            let target =e.target
+            let message = " ";
+
+            console.log(target);
+
+            switch(target.id){
+                case "pending":
+                message="the pending radio button changed"
+                break
+
+                case "resolved":
+                message="the resolved button changed";
+                break
+
+                case "rejected":
+                message="the rejected button changed"
+                break
+                
+                
+            }
+
+            result.innerHTML = message
+
+        
+        })
+       
+
+    </script>
+</body>
+</html>

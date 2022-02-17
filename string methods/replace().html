@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">You will learn how to use the JavaScript</p>
+    <button id="replace">click</button>
+
+    <script>
+        let myButton =document.getElementById("replace")
+        let myText = document.getElementById("text")
+        
+        
+
+        myButton.addEventListener("click",function () {
+            console.log("hello");
+
+            let myButton =document.getElementById("replace")
+            let myText = document.getElementById("text")
+            console.log(myText.innerHTML);
+
+            document.getElementById("text").innerHTML=myText.innerHTML.replace("JavaScript", "Python")
+
+
+
+        });
+
+
+
+    </script>
+</body>
+</html>
