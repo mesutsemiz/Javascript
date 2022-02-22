@@ -86,17 +86,35 @@
 
 
 
-function total1(array,callback){
-    let sum = 0;
-    for(let i = 0; i < array.length; i++){
-        callback(array[i]);
-        sum+=array[i];
+// function total1(array,callback){
+//     let sum = 0;
+//     for(let i = 0; i < array.length; i++){
+//         callback(array[i]);
+//         sum+=array[i];
 
-    }
-    return  sum;
+//     }
+//     return  sum;
 
+// }
+
+// const result = total1([3,6,5,1,4,8,2],console.log)
+
+// console.log(result)
+
+
+let url = 'https://wwww.javascripttutorial.net/pic.jpg';
+
+function download(url,process){
+    setTimeout(()=>{
+        console.log(`Downloading ${url}...`)
+
+    },5000)
+    
+    process(url)
 }
 
-const result = total1([3,6,5,1,4,8,2],console.log)
+function process(picture){
+    console.log(`Processing ${picture}`)
+}
 
-console.log(result)
+download(url, process);

@@ -11,7 +11,7 @@
 // let age =25;
 // let newAge =age;
 
-// newAge = newAge +1;
+// newAge = newAge +1;h
 // console.log(age, newAge);
 
 let person={
