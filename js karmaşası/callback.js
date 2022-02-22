@@ -104,13 +104,13 @@
 
 let url = 'https://wwww.javascripttutorial.net/pic.jpg';
 
-function download(url,process){
+function download(url,cb){
     setTimeout(()=>{
         console.log(`Downloading ${url}...`)
 
     },5000)
     
-    process(url)
+    cb(url)
 }
 
 function process(picture){
