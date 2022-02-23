@@ -16,3 +16,17 @@
 
 // test()
 
+(async()=>{
+    async function hello(){
+        return new Promise((resolve,reject)=>{
+            resolve("bonjooorrr")
+    
+        })
+    }
+    
+    const text = await hello();
+    console.log(text)
+    
+
+})()
+
