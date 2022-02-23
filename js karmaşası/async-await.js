@@ -16,17 +16,30 @@
 
 // test()
 
-(async()=>{
-    async function hello(){
-        return new Promise((resolve,reject)=>{
-            resolve("bonjooorrr")
+
+
+//23.02.2022 Prototürk async await anlatımı
+
+// (async()=>{
+//     async function hello(){
+//         return new Promise((resolve,reject)=>{
+//             resolve("bonjooorrr")
     
-        })
-    }
+//         })
+//     }
     
-    const text = await hello();
-    console.log(text)
+//     const text = await hello();
+//     console.log(text)
     
 
-})()
+// })()
+
+
+// document.querySelector("#btn").addEventListener("click",async ()=>{
+//    const result=await Notification.requestPermission()
+//    console.log(result)
+   
+
+// })
+
 
