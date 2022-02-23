@@ -43,3 +43,32 @@
 // })
 
 
+// document.querySelector("#btn").addEventListener("click",()=>{
+//     fetch("https://jsonplaceholder.typicode.com/posts/1")
+//     .then(re =>re.json())
+//     .then(response=>{
+//         fetch(`https://jsonplaceholder.typicode.com/posts/${response.id}/comments`)
+//         .then(res =>res.json())
+//         .then(data =>{
+//             console.log(data)
+//         })
+//     })
+// })
+
+
+document.querySelector("#btn").addEventListener("click",async()=>{
+    const post = await (await fetch("https://jsonplaceholder.typicode.com/posts/1")).json();
+  
+  
+
+    const comment =await (await fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)).json();
+
+    console.log(comment,post )
+    
+    
+    
+    
+    
+    
+})
+
