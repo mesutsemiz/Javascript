@@ -33,15 +33,53 @@
 // console.log(school)
 
 
-function stat(a, b) {
-    return [
-        a+b, //
-        (a+b)/2, //
-        a-b
-    ]
+// function stat(a, b) {
+//     return [
+//         a+b, //
+//         (a+b)/2, //
+//         a-b
+//     ]
     
-}
+// }
 
-let [sum, average, difference] = stat(45,24)
+// let [sum, average, difference] = stat(45,24)
 
-console.log(sum, average, difference)
+// console.log("sum:"+sum, "avr:"+average, "diffr:"+difference)
+
+
+// destructing in array
+
+// const [name, surname] = ["mesut", "semiz"]
+
+// console.log(name,surname)
+
+// obje destructuring
+
+
+// const user = {
+//     name: "selim",
+//     surname: "çetin", 
+//     age : 28
+// }
+
+// const {name, surname, age} =user
+
+// console.log(name,age)
+
+// function user(data,{age}){
+//     console.log(data,age)
+// }
+
+// user("yavuz",{
+//     name:"emre",
+//     surname:"tek",
+//     age:25
+// })
+
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+.then(response => response.json())
+.then(data =>{
+    console.log(data)
+})
+
